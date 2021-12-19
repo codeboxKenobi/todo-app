@@ -64,7 +64,7 @@ export default {
       }
     },
     getList () {
-       document.location.href = '/'
+
     },
     activeList () {
       this.sortList = this.$store.getters.TODOS.filter(item => item.todoChecker === false)
@@ -77,7 +77,6 @@ export default {
       if (chk.tagName === 'INPUT' && chk.type === 'checkbox') {
         console.log(chk.name, chk.id, chk.checked)
         this.$store.dispatch('UPDATE_TODOS', chk)
-        location.reload()
       }
     },
     itemLeft () {
